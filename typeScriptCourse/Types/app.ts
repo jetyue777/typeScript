@@ -1,8 +1,9 @@
+//JavaScript has Dynamic type, where TypeScript has static type
 // string
 let myName: string = 'Max';
-// myName = 28;
+// myName = 28; error
 
-// number
+// number (integer, float)
 let myAge: number = 27;
 // myAge = 'Max';
 
@@ -15,21 +16,31 @@ let myRealAge: number;
 myRealAge = 27;
 // myRealAge = '27';
 
+// type any (no compilation check, no IDE support)
+let typeAny;
+
+let auto = "how are you";
+
+
 // array
 let hobbies: any[] = ["Cooking", "Sports"];
+console.log("type of hobbies " + typeof hobbies);
 hobbies = [100];
-// hobbies = 100;
+//hobbies = 100;
 
-// tuples
+// tuples (fix the size and type)
 let address: [string, number] = ["Superstreet", 99];
+//address = ['test', 1, 1];
 
-// enum
+// enum (new type typeScript)
 enum Color {
     Gray, // 0
     Green = 100, // 100
-    Blue = 2// 2
+    Blue = 2,// 2
+    Good //should default to 3
 }
-let myColor: Color = Color.Blue;
+
+let myColor: Color = Color.Good;
 console.log(myColor);
 
 // any
