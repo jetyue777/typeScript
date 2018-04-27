@@ -55,34 +55,49 @@ function returnMyName(): string {
 }
 console.log(returnMyName());
 
-// void
+// void - does not return anything
 function sayHello(): void {
     console.log("Hello!");
 }
 
-// argument types
+// argument types number
 function multiply(value1: number, value2: number): number {
     return value1 * value2;
 }
+
 // console.log(multiply(2, 'Max'));
 console.log(multiply(10, 2));
 
-// function types
+// function types - function are type on their own
+//
 let myMultiply: (a: number, b: number) => number;
-// myMultiply = sayHello;
+
+//myMultiply can only be assigned of this format of function: (a: number, b: number) => number;
+//accept two arguments with number and returns a number
+
+//sayHello has no argument and returns nothing
+//myMultiply = sayHello;
 // myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
 
 // objects
+// use {} to define the type of object property type
 let userData: { name: string, age: number } = {
     name: "Max",
     age: 27
 };
-// userData = {
-//     a: "Hello",
-//     b: 22
-// };
+
+// in object, order of property does not matter
+userData = {
+    age: 27,
+    name: "Jet"
+};
+
+/*userData = {
+    a: "Hello",
+    b: 22
+};*/
 
 // complex object
 let complex: {data: number[], output: (all: boolean) => number[]} = {
@@ -92,10 +107,12 @@ let complex: {data: number[], output: (all: boolean) => number[]} = {
         return this.data;
     }
 };
-// complex = {};
+//complex = {};
+
+console.log('jet testing '+ complex.output(true));
 
 // type alias
-
+// define a type using type keyword
 type Complex = {data: number[], output: (all: boolean) => number[]};
 
 let complex2: Complex = {
@@ -106,9 +123,10 @@ let complex2: Complex = {
     }
 };
 
-// union types
+// union types (both work here)
 let myRealRealAge: number | string = 27;
 myRealRealAge = "27";
+myRealRealAge = 35;
 // myRealRealAge = true;
 
 // check types
