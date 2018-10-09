@@ -29,7 +29,7 @@ hobbies = [100];
 //hobbies = 100;
 
 // tuples (fix the size and type)
-let address: [string, number] = ["Superstreet", 99];
+let address: [string, number, number] = ["Superstreet", 99, 0];
 //address = ['test', 1, 1];
 
 // enum (new type typeScript)
