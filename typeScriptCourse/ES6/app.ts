@@ -32,7 +32,7 @@ console.log(addNumbers(10, 3));
 
 // same as
 //const multiplyNumbers = (number1: number, number2: number) => { return number1 * number2};
-const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
+const multiplyNumbers = (number1: number, number2: number) : number => number1 * number2;
 
 console.log(multiplyNumbers(10, 3));
 
@@ -65,7 +65,7 @@ const numbers = [1, 10, 99, -5];
 console.log(Math.max(33, 991, 10, -3));
 
 //... spread operator spreads out array into single value (list of value)
-// rest parameter ... when calling function
+//  parameter ... when calling function
 console.log(Math.max(...numbers));
 
 //rest parameter accepts a list of arguments and assign into an array

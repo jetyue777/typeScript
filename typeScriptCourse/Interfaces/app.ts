@@ -33,6 +33,8 @@ function changeName(person: NamedPerson) {
 const person: NamedPerson = {
     firstName: "Max",
     hobbies: ["Cooking", "Sports"], //[propName: string]: any;
+    //hobbies2: ["Cooking", "Sports"], //[propName: string]: any;
+
     greet(lastName: string) {
         console.log("Hi, I am " + this.firstName + " " + lastName);
     }
