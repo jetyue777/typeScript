@@ -35,8 +35,12 @@ person.printAge();
 
 // Inheritance using extends keyword
 class Max extends Person {
-    // name = "Max";
-    //type does not get inherited from parent class due to private
+    name = "Max";
+    //"type" property does not get inherited from parent class due to private
+    //type = "test";
+
+    //inherited class also has access to protected property
+    age = 10;
 
     constructor(username: string) {
 
@@ -137,7 +141,7 @@ console.log(newProject.calcBudget());
 class OnlyOne {
 
     //only one instance during runtime
-    private static instance: OnlyOne; //able to access Class type within the class
+    private static instance: OnlyOne; //able to access Class type (OnlyOne) within the class
 
     //can not instantiate the class from outside anymore by adding the private keyword to the constructor
     private constructor(public readonly name: string) {}
@@ -165,6 +169,6 @@ console.log(rightWay.name);
 //rightWay.name = 'how are you';
 
 //can also set rightWay.name to something
-//Need to implement readonly property by addying the "readonly" property
+//Need to implement readonly property by adding the "readonly" property
 
 

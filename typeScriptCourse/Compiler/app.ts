@@ -6,7 +6,7 @@ let myAge: number = 27;
 //myName = 30;
 
 
-let anything;
+let anything : string | number;
 anything = 12;
 
 // myName = 30;

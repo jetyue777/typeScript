@@ -69,7 +69,7 @@ function multiply(value1: number, value2: number): number {
 console.log(multiply(10, 2));
 
 // function types - function are type on their own
-//
+// assign a type to a variable
 let myMultiply: (a: number, b: number) => number;
 
 //myMultiply can only be assigned of this format of function: (a: number, b: number) => number;
@@ -77,7 +77,7 @@ let myMultiply: (a: number, b: number) => number;
 
 //sayHello has no argument and returns nothing
 //myMultiply = sayHello;
-// myMultiply();
+//myMultiply();
 myMultiply = multiply;
 console.log(myMultiply(5, 2));
 
@@ -100,10 +100,13 @@ userData = {
 };*/
 
 // complex object
+//assign type to the output property
 let complex: {data: number[], output: (all: boolean) => number[]} = {
     data: [100, 3.99, 10],
 
+    //assign the actual function to the output property with type predefined
     output: function (all: boolean): number[] {
+        console.log(all);
         return this.data;
     }
 };
